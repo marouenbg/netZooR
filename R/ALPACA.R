@@ -76,7 +76,10 @@ alpaca <- function(net.table,file.stem,verbose=F)
     louv.Bscores <- c(louv.Bscores,gene.sums/this.denom)
   }
   
+  print(which(is.nan(louv.Ascores) == TRUE))
+  print(which(is.nan(louv.Bscores) == TRUE))
   louv.scores <- c(louv.Ascores,louv.Bscores)
+  print(which(is.nan(louv.scores) == TRUE))
   
   if (!is.null(file.stem)) {
     write.table(cbind(names(louv.memb), as.vector(louv.memb)),paste(c(file.stem,"_ALPACA_final_memb.txt"),collapse=""),col.names=F,row.names=F,quote=F,sep="\t")
