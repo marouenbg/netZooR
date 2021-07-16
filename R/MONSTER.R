@@ -52,9 +52,11 @@ monster.print.monsterAnalysis <- function(x, ...){
 #' regulatory networks and then estimates a "transition matrix" that converts one state to another. 
 #' By examining the properties of the transition matrix, we can gain insight into regulatory 
 #' changes associated with phenotypic state transition.
-#' Important note: the direct regulatory network observed from gene expression is currently
+#' Important note 1: the direct regulatory network observed from gene expression is currently
 #' implemented as a regular correlation as opposed to the partial correlation described 
 #' in the paper.
+#' Important note 2: the dTFI score is computed as the squared off-diagonal mass and not as a division between squared
+#' off-diagonal mass and the squared column (including the diagonal).
 #' Citation: Schlauch, Daniel, et al. "Estimating drivers of cell state transitions using gene regulatory network models." 
 #' BMC systems biology 11.1 (2017): 139. https://doi.org/10.1186/s12918-017-0517-y
 #' @param expr Gene Expression dataset, can be matrix or data.frame of expression values or ExpressionSet. 
