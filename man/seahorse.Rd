@@ -70,7 +70,7 @@ phenotype_dictionary = c("categorical", "numeric")
 pathways = list()
 pathways$pathway1 = sample(rownames(expression_data), 5)
 pathways$pathway2 = sample(rownames(expression_data), 3)
-pathways$pathway1 = sample(rownames(expression_data), 7)
+pathways$pathway3 = sample(rownames(expression_data), 7)
 
 # Run seahorse
 results <- seahorse(expression_data, phenotype_data, phenotype_dictionary, pathways)
